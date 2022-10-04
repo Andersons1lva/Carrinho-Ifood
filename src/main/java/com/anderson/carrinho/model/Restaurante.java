@@ -1,8 +1,19 @@
 package com.anderson.carrinho.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 import javax.persistence.*;
 import java.util.List;
-
+@AllArgsConstructor
+@NoArgsConstructor
+@Builder
+@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
+@Data
+@Entity
 public class Restaurante {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -11,6 +22,6 @@ public class Restaurante {
     @OneToMany(cascade = CascadeType.ALL)
     private List<Produto> cardapio;
 
-    @Enumerated
+    @Embedded
     private Endereco endereco;
 }
