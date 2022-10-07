@@ -1,4 +1,4 @@
-package com.anderson.carrinho.resource;
+package com.anderson.carrinho.resource.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

@@ -2,6 +2,7 @@ package com.anderson.carrinho.resource;
 
 import com.anderson.carrinho.model.Carrinho;
 import com.anderson.carrinho.model.Item;
+import com.anderson.carrinho.resource.dto.ItemDto;
 import com.anderson.carrinho.service.CarrinhoService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
